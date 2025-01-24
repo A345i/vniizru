@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка (меню) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Vniiz.Ru</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container-fluid main-container">
+        <!-- Оверлей для закрытия боковой панели -->
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+        <!-- Кнопка для управления боковой панелью (видна только на мобильных устройствах) -->
+        <button id="sidebar-toggle" class="btn btn-primary d-md-none">
+            ☰ Категории
+        </button>
+
+        <!-- Боковая панель с категориями -->
+        <div class="col-md-3 sidebar" id="sidebar">
+            <h3 class="text-center mt-3">Категории</h3>
+            <ul class="list-group" id="categories-sidebar">
+                <!-- Категории будут загружены сюда -->
+            </ul>
+        </div>
+
+        <!-- Основной контент (каталог) -->
+        <div class="col-md-9 main-content">
+            <div class="container mt-5">
+                <h1 class="text-center mb-4">Каталог товаров</h1>
+                <div id="categories-container">
+                    <!-- Товары будут загружены сюда -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer bg-light text-center py-4 mt-4">
+        <div class="container">
+            <p class="mb-0">© vniiz.ru. Все права защищены.</p>
+            <p class="mb-0">
+                <a href="index.html" class="text-decoration-none">Главная</a> |
+                <a href="catalog.html" class="text-decoration-none">Каталог</a> |
+                <a href="contacts.html" class="text-decoration-none">Контакты</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для детальной информации о товаре -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Информация о товаре</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-product-image" src="" class="modal-product-image img-fluid" alt="Изображение товара">
+                    <h4 id="modal-product-name" class="modal-product-name"></h4>
+                    <div id="modal-product-description" class="modal-product-description"></div>
+                    <hr>
+                    <p><strong>Цена:</strong> <span id="modal-product-price" class="modal-product-price"></span></p>
+                    <p><strong>Категории:</strong> <span id="modal-product-categories"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение Bootstrap JS и Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Подключение вашего JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

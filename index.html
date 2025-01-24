@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка (меню) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Vniiz.Ru</a>
+            
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container mt-5 pt-4">
+
+        <div class="row">
+            <div class="col">
+                <!-- Изображение над основной надписью -->
+                <div class="text-center mb-4">
+                    <img src="img/vniizru_top_3.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="col text-center">
+                <span class="h2 text-danger">(499) 976-32-58</span>
+                <br />
+                <span class="h2 text-danger">(985) 211-87-84</span>
+                <br />
+                <a class="h4 text-primary" href="Data/price2015.doc"><span>скачать прайс лист</span></a>
+            </div>
+        </div>
+        
+
+        <div class="jumbotron text-center bg-light p-5 rounded">
+            <h1 class="display-4">Информационный ресурс специалистов ВНИИЗ</h1>
+            <p class="lead">Научные разработки и технологии для зерновой отрасли</p>
+        </div>
+
+        <!-- Первый абзац -->
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2>О нас</h2>
+                <p class="lead">
+                    За годы своей деятельности специалисты ВНИИЗерна прошли большой и сложный путь в создании научных основ по послеуборочной обработке и хранению зерна, производству муки, крупы и других продуктов переработке зерна, расширению ассортимента и улучшению качества хлебопродуктов.
+                </p>
+            </div>
+        </div>
+
+        <!-- Второй абзац с картинкой слева -->
+        <div class="row mt-5 align-items-center">
+            <div class="col-md-4">
+                <img src="img/m001.jpg" class="img-fluid rounded mb-3 shadow" alt="Фото 1">
+            </div>
+            <div class="col-md-8">
+                <p>
+                    Разработанные специалистами института прогрессивные технологии и оборудование, приборы и методы определения качества зерна были приняты и реализованы при создании материально-технической базы хлебоприемных и зерноперерабатывающих предприятий России.
+                </p>
+            </div>
+        </div>
+
+        <!-- Третий абзац с картинкой справа -->
+        <div class="row mt-5 align-items-center">
+            <div class="col-md-8">
+                <p>
+                    Большой вклад принадлежит специалистам ВНИИЗерна в области техники и технологии переработки зерна в муку и крупу, что позволило во много раз повысить эффективность использования сырья, обеспечить выработку новых продуктов из зерна, разнообразить питание людей, повысить биологическую ценность мучных, крупяных и других изделий из зерна.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img src="img/m002.jpg" class="img-fluid rounded mb-3 shadow" alt="Фото 2">
+            </div>
+        </div>
+
+        <!-- Четвертый абзац с картинкой слева -->
+        <div class="row mt-5 align-items-center">
+            <div class="col-md-4">
+                <img src="img/m003.jpg" class="img-fluid rounded mb-3 shadow" alt="Фото 3">
+            </div>
+            <div class="col-md-8">
+                <p>
+                    Подавляющее большинство отечественного лабораторного оборудования, применяемого в отрасли, разработано при непосредственном участии специалистов ВНИИЗерна. Это позволяет следить за качеством поставляемого оборудования, производить предэксплуатационную подготовку, наладку (где необходимо) и помощь в техническом обслуживании.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer bg-light text-center py-4 mt-4">
+        <div class="container">
+            <p class="mb-0">© vniiz.ru. Все права защищены.</p>
+            <p class="mb-0">
+                <a href="index.html" class="text-decoration-none">Главная</a> |
+                <a href="catalog.html" class="text-decoration-none">Каталог</a> |
+                <a href="contacts.html" class="text-decoration-none">Контакты</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Подключение Bootstrap JS и Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
