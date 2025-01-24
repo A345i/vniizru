@@ -60,6 +60,9 @@ function displayCategories(products, selectedCategory = null) {
 
         container.appendChild(categoryCard);
 
+        // Сортировка товаров по TovSortIndex (добавлено)
+        productsInCategory.sort((a, b) => a.TovSortIndex - b.TovSortIndex);
+
         // Отображение товаров в категории
         const productList = categoryCard.querySelector(`#category-${categoryId}`);
         if (!productList) {
