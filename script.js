@@ -3,7 +3,7 @@ let allProducts = []; // Глобальная переменная для хра
 // Загрузка данных из JSON-файла
 async function loadProducts() {
     try {
-        const response = await fetch('data/products_with_categories.json');
+        const response = await fetch('https://raw.githubusercontent.com/A345i/vniizru/refs/heads/main/Data/products_with_categories.json');
         allProducts = await response.json();
         displayCategories(allProducts);
         populateSidebar(allProducts);
