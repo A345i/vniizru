@@ -3,7 +3,7 @@ let allProducts = []; // Глобальная переменная для хра
 // Загрузка данных из JSON-файла
 async function loadProducts() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/A345i/vniizru/refs/heads/main/Data/products_with_categories.json');
+        const response = await fetch('data/products_with_categories.json');
         allProducts = await response.json();
         displayCategories(allProducts);
         populateSidebar(allProducts);
@@ -21,9 +21,15 @@ function displayCategories(products, selectedCategory = null) {
     }
     container.innerHTML = ''; // Очистка контейнера
 
+    // Фильтрация по поисковому запросу
+    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+    const filteredProducts = products.filter(product =>
+        product.TovName.toLowerCase().includes(searchQuery)
+    );
+
     // Группировка товаров по категориям
     const categories = {};
-    products.forEach(product => {
+    filteredProducts.forEach(product => {
         product.Categories.forEach(category => {
             if (!categories[category.CatName]) {
                 categories[category.CatName] = [];
@@ -163,6 +169,18 @@ sidebarOverlay.addEventListener('click', () => {
     sidebar.classList.remove('active');
     sidebarOverlay.classList.remove('active');
     document.body.classList.remove('sidebar-open'); // Разблокировка прокрутки
+});
+
+// Обработчик поиска
+document.getElementById('searchInput').addEventListener('input', () => {
+    // Сбрасываем активную категорию
+    document.querySelectorAll('#categories-sidebar .list-group-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    document.querySelector('#categories-sidebar li:first-child').classList.add('active');
+
+    // Обновляем отображение товаров
+    displayCategories(allProducts);
 });
 
 // Запуск загрузки данных при загрузке страницы
